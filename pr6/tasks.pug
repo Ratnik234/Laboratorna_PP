@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Список справ
+
+  form#task-form
+    input#title(type="text" name="title" placeholder="Нова задача...")
+    button(type="submit") Додати
+
+  ul#task-list
+    each task in tasks
+      li(data-id=task.id class=task.completed ? 'done' : '')
+        input.toggle(type="checkbox" checked=task.completed)
+        span= task.title
+        button.delete(type="button") Видалити

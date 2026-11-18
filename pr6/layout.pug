@@ -1,0 +1,20 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css")
+    style.
+      body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px; }
+      form { display: flex; gap: 8px; margin-bottom: 20px; }
+      input[type=text] { flex: 1; padding: 8px; }
+      button { padding: 8px 12px; cursor: pointer; }
+      ul { list-style: none; padding: 0; }
+      li { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #ddd; }
+      li span { flex: 1; }
+      li.done span { text-decoration: line-through; color: #888; }
+  body
+    block content
+    script(src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js")
+    script(src="/js/main.js")
